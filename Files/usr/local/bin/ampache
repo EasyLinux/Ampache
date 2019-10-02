@@ -1,0 +1,8 @@
+#!/bin/sh
+
+sed -i "s/DBHOST/$DBHOST/g" /var/www/html/config/ampache.cfg.php
+sed -i "s/PASSWORD/$PASSWORD/g" /var/www/html/config/ampache.cfg.php
+sed -i "s/DBNAME/$DBNAME/g" /var/www/html/config/ampache.cfg.php
+sed -i "s/DBUSER/$DBUSER/g" /var/www/html/config/ampache.cfg.php
+
+exec /usr/sbin/httpd -D FOREGROUND
